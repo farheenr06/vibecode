@@ -143,7 +143,8 @@ export async function runAgent(taskId, userPrompt) {
 
         let specs;
         try {
-          specs = await extractSpecs(page.title, source.url, page.text); // real Gemini call
+  specs = await extractSpecs(page.title, source.url, page.text); // real Gemini call
+  console.log(`[debug] specs from ${source.url}:`, specs);
         } catch (err) {
           await emit(taskId, {
             type: EVENTS.DATA_EXTRACTED,
