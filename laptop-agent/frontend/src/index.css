@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-deck-950 text-slate-200 font-sans antialiased;
+  background-image: radial-gradient(circle at 15% 0%, rgba(155, 135, 245, 0.06), transparent 40%),
+    radial-gradient(circle at 85% 10%, rgba(61, 221, 192, 0.05), transparent 35%);
+}
+
+::selection {
+  background: rgba(61, 221, 192, 0.25);
+}
